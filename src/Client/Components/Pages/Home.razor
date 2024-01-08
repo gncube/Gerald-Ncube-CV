@@ -10,8 +10,9 @@
     <select class="form-select"></select>
 </div>
 
-
-Welcome to your new app.
+<div class="container">
+    Welcome to your new app.
+</div>
 
 <script>
     fetch('https://bootswatch.com/api/5.json')
@@ -35,6 +36,7 @@ Welcome to your new app.
             const theme = themes[e.target.value];
             document.querySelector('#theme').setAttribute('href', theme.css);
             document.querySelector('.alert h1').textContent = theme.name;
+            document.querySelector('.alert p').textContent = theme.description;
         });
 
         const changeEvent = new Event('change');
