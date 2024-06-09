@@ -1,0 +1,19 @@
+﻿@inject IJSRuntime JSRuntime
+
+<div class="container mt-5">
+    <div class="alert alert-info">
+        <h1>Bootstrap</h1>
+        <p>This is a demo of the Bootswatch API.</p>
+    </div>
+    <select class="form-select"></select>
+</div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("themeSelector.load");
+        }
+    }
+}
