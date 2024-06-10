@@ -1,0 +1,84 @@
+﻿@page "/contact"
+@using System.ComponentModel.DataAnnotations
+
+<header class="py-5 border-bottom">
+    <div class="container pt-md-1 pb-md-4">
+        <h3>LET'S CHAT</h3>
+
+        <EditForm Model="contactForm" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <InputText id="firstName" class="form-control" @bind-Value="contactForm.FirstName" />
+                <ValidationMessage For="() => contactForm.FirstName" />
+            </div>
+
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <InputText id="lastName" class="form-control" @bind-Value="contactForm.LastName" />
+                <ValidationMessage For="() => contactForm.LastName" />
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <InputText id="email" type="email" class="form-control" @bind-Value="contactForm.Email" />
+                <ValidationMessage For="() => contactForm.Email" />
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone (optional)</label>
+                <InputText id="phone" class="form-control" @bind-Value="contactForm.Phone" />
+                <ValidationMessage For="() => contactForm.Phone" />
+            </div>
+
+            <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <InputText id="subject" class="form-control" @bind-Value="contactForm.Subject" />
+                <ValidationMessage For="() => contactForm.Subject" />
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <InputTextArea id="message" class="form-control" @bind-Value="contactForm.Message" />
+                <ValidationMessage For="() => contactForm.Message" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </EditForm>
+
+    </div>
+</header>
+
+
+@code {
+    private ContactForm contactForm = new();
+
+    private void HandleValidSubmit()
+    {
+        // Handle the valid form submission
+        // For example, send the form data to a backend service
+    }
+
+    public class ContactForm
+    {
+        [Required(ErrorMessage = "First name is required")]
+        public  string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Last name is required")]
+        public string LastName { get; set; }
+
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Invalid email address")]
+        public string Email { get; set; }
+
+        public string Phone { get; set; }
+
+        [Required(ErrorMessage = "Subject is required")]
+        public string Subject { get; set; }
+
+        [Required(ErrorMessage = "Message is required")]
+        public string Message { get; set; }
+    }
+}
