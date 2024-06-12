@@ -17,8 +17,8 @@
                 select.addEventListener('change', (e) => {
                     const theme = themes[e.target.value];
                     document.querySelector('#theme').setAttribute('href', theme.css);
-                    document.querySelector('.alert h1').textContent = theme.name;
-                    document.querySelector('.alert p').textContent = theme.description;
+                    document.querySelector('.themeSelector dt').textContent = theme.name;
+                    document.querySelector('.themeSelector dd').textContent = theme.description;
                 });
 
                 const changeEvent = new Event('change');

@@ -1,12 +1,25 @@
 ﻿@inject IJSRuntime JSRuntime
 
-<div class="container mt-5">
-    <div class="alert alert-info">
-        <h1>Bootstrap</h1>
-        <p>This is a demo of the Bootswatch API.</p>
+<div class="d-grid gap-1">
+    <div class="p-0 bg-light border">
+        <dl class="themeSelector row">
+            <dt class="col-sm-3">Description: </dt>
+            <dd class="col-sm-9 text-start">A description list is perfect for defining terms.</dd>
+        </dl>
     </div>
-    <select class="form-select"></select>
+    <div class="p-0 bg-light border">
+        <div class="row">
+        <div class="col-sm-3"><strong>Themes:</strong></div>
+        <div class="col-sm-9">
+            <select class="form-select form-control" id="selectThemes"></select>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
+
 
 @code {
     protected override async Task OnAfterRenderAsync(bool firstRender)
