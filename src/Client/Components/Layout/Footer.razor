@@ -1,41 +1,65 @@
-﻿﻿<div class="p-3 footerStyle" data-bs-theme="dark">
-    <div class="container-xxl">
-        <div class="row row-cols-1 row-cols-md-3 text-center align-items-center g-3">
-            <div class="col text-md-start order-last order-md-first">
-                <div class="row">
-                    <div class="col-12">
-                        <span class="me-1">Built With Blazor</span>
-                        @* <img src="images/MarkSpectreLogoLight.png" height="30" /> *@
-                    </div>
-                    <div class="col-12">
-                        &copy; @DateTimeOffset.UtcNow.Year Gerald Ncube.
-                    </div>
-                </div>
-            </div>
-            <div class="col text-left">
-                <ThemeSelector />
-            </div>
-            <div class="col text-md-end">
-                <div class="row">
-                    <div class="col-12">
-                        <a href="#"><i class="bi bi-youtube"></i></a>
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"><i class="bi bi-github"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                    </div>
-@*                     <div class="col-12">
-                        <a href="#">Blog</a>
-                        &bull;
-                        <a href="#">Portfolio</a>
-                        &bull;
-                        <a href="#">Bug Tracker</a>
-                    </div> *@
+﻿<footer class="bd-footer py-4 py-md-5 mt-5 bg-light">
+    <div class="container py-4 py-md-5 px-4 px-md-3">
+        <div class="row">
+            <div class="col-lg-3 mb-3">
+                <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
+                   aria-label="Bootswatch">
+                    <img class="d-inline-block mx-2" src="https://bootswatch.com/_assets/img/logo.svg" alt="" width="30"
+                         height="28">
+                    <span class="fs-5">Bootswatch</span>
+                </a>
+
+                <div class="p-2">
+                    <ThemeSelector />
                 </div>
 
+                <ul class="list-unstyled small text-muted">
+                    <li class="mb-2">
+                        Designed and built with all the love in the world by <a href="https://bootswatch.com/">Thomas Park</a> with the help of <a href="https://github.com/thomaspark/bootswatch/graphs/contributors">our contributors</a>.
+                    </li>
+                    <li class="mb-2">
+                        Code licensed <a href="https://github.com/thomaspark/bootswatch/blob/v5/LICENSE"
+                                         target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank"
+                                                                                                 rel="license noopener">CC BY 3.0</a>.
+                    </li>
+                    <li class="mb-2">
+                        &copy; @DateTimeOffset.UtcNow.Year Gerald Ncube.
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="/">Home</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>Guides</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="/">Getting started</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>Projects</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="/">Bootstrap 5</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>Community</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
+                    <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Discussions</a></li>
+                    <li class="mb-2"><a href="https://github.com/sponsors/twbs">Corporate sponsors</a></li>
+                    <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
+                    <li class="mb-2">
+                        <a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-</div>
+</footer>
 
 
 @code {
