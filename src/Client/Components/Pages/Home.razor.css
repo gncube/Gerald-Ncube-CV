@@ -1,0 +1,10 @@
+﻿.splash {
+    position: relative;
+    padding: 12em 0 6em;
+    color: #fff;
+    text-align: center;
+    background-color: #375ee3;
+    background-image: url(../../images/splash.svg), linear-gradient(145deg, #375ee3 0%, #6543e0 80%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
