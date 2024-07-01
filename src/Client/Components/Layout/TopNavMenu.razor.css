@@ -1,7 +1,7 @@
 ﻿﻿.navStyle {
-    background-color: var(--cf-theme-900);
+    /*background-color: var(--cf-theme-900);*/
 }
 
 .navbar-nav {
-    --bs-navbar-hover-color: var(--cf-theme-400);
+    /*--bs-navbar-hover-color: var(--cf-theme-400);*/
 }
