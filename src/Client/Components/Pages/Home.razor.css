@@ -1,8 +1,7 @@
 ﻿
 .splash {
     position: relative;
-    padding: 12em 0 6em;
-    text-align: center;
+    padding: 6em 0 6em;
     color: var(--bs-body-color);
     background-color: var(--bs-body-bg);
     /*
