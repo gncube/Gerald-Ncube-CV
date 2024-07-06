@@ -1,0 +1,19 @@
+﻿<section class="my-5 py-5 text-center">
+    <h2>@Title</h2>
+    <p>@Message</p>
+    <a href="@ButtonLink" class="btn btn-lg btn-secondary">@ButtonText</a>
+</section>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = "Let's Connect!";
+
+    [Parameter]
+    public string Message { get; set; } = "Interested in collaborating or learning more about my work? Feel free to reach out.";
+
+    [Parameter]
+    public string ButtonText { get; set; } = "Contact Me";
+
+    [Parameter]
+    public string ButtonLink { get; set; } = "/contact";
+}

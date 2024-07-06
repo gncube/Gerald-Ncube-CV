@@ -6,8 +6,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h1>Gerald Ncube</h1>
-                <p class="lead">I'm Gerald Ncube, a software engineer with a passion for developing innovative solutions that make a difference. With a keen interest in open-source projects, I'm always looking to collaborate and contribute to the tech community.</p>
+                <h1>Welcome to My Portfolio</h1>
+                <p class="lead">Discover my projects, skills, and journey in software development.</p>
+
                 <div class="d-grid gap-2">
                     <a href="https://github.com/gncube" class="btn btn-lg btn-primary" role="button" target="_blank"> <i class="bi bi-star px-2"></i> Star Me On Github</a>
                 </div>
@@ -18,5 +19,27 @@
     </div>
 </div>
 
-<div class="container">
-</div>
+<section class="my-5 py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>About Me</h2>
+                <p>I'm a passionate software developer with a focus on creating impactful and user-friendly applications. With expertise in both front-end and back-end technologies, I strive to bridge the gap between user needs and technological solutions.</p>
+                <p>Here's what I bring to the table:</p>
+                <ul>
+                    <li>Strong problem-solving skills and creativity.</li>
+                    <li>Experience with modern development frameworks.</li>
+                    <li>A commitment to continuous learning and improvement.</li>
+                </ul>
+                <a href="/about" class="btn btn-primary">Learn More About Me</a>
+            </div>
+            <div class="col-md-6">
+                <img src="images/profile.jpg" class="img-fluid rounded-circle" alt="Profile Picture">
+            </div>
+        </div>
+    </div>
+</section>
+
+<Client.Components.Content.FeaturedProjects Projects="@GeesProjects" />
+
+<CTA Title="Get In Touch" Message="Have a project in mind? Let's talk." ButtonText="Reach Out" ButtonLink="/contact" />
